@@ -1,6 +1,10 @@
-# Origin Search
+# Origin Search 🧬
+*Simple string slicer originally made to quickly grab a sequence*
 
-### Use Locally
+## Use Online
+[Click here](https://jasonflorentino.github.io/originSearch/) to view a live page.
+
+## Use Locally
 * Download this repository: Click "Code" (the green button) > Download Zip
 * Unzip the download
 * Open `index.html` in a web browser
