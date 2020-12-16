@@ -13,6 +13,7 @@ function cleanOriginData(text) {
 const resultField = document.getElementById("result");
 
 function execute() {
+    resultField.className = "";
     const cleanData = cleanOriginData(document.getElementById("originData").value);
     const startIndex = document.getElementById("startIndex").value;
     const numberOfItems = document.getElementById("numberOfItems").value;
@@ -20,18 +21,18 @@ function execute() {
     let searchResult = [];
 
     if (startIndex < 1) {
-            searchResult.push("Error: Please enter a valid number in Start Index");
+            searchResult.push("Error: Invalid Start Index");
             resultField.className = "error";
         } else if (startIndex > cleanData.length) {
-            searchResult.push("Error: Start Index is larger than origin data");
+            searchResult.push("Error: Start Index too large for Origin Data");
             resultField.className = "error";
         } else if (numberOfItems < 1) {
-            searchResult.push("Error: Please enter a valid number in Number of Items");
+            searchResult.push("Error: Invalid Number of Items");
             resultField.className = "error";
-        // } else if ((startIndex + numberOfItems) > cleanData.length) {
-        //     searchResult.push("Error: Number of Items would be greater than items in origin data");
-        //     resultField.className = "error";
-        }else {
+        } else if (cleanData.length < Number(startIndex) + Number(numberOfItems)) {
+            searchResult.push("Error: Number of Items too large for origin data");
+            resultField.className = "error";
+        } else {
             for(let i = 0; i < numberOfItems; i++) {
                 searchResult.push(cleanData[(startIndex-1)+i])
             }
