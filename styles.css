@@ -23,6 +23,7 @@ main {
     padding: 40px;
     background-color: #fafafa;
     box-shadow: 0px 3px 12px rgba(97, 12, 91, 0.3);
+    max-width: 60%;
 }
 
 input, textarea {
@@ -65,6 +66,11 @@ h5 {
 
 #reset:hover {
     background-color: #464545;
+}
+
+#resultArea {
+    overflow: scroll;
+    word-wrap: break-word;
 }
 
 .error {
