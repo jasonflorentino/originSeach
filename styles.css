@@ -69,7 +69,6 @@ h5 {
 }
 
 #resultArea {
-    overflow: scroll;
     word-wrap: break-word;
 }
 
