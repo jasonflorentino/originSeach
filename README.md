@@ -1,5 +1,6 @@
 # Origin Search
 
+### Use Locally
 * Download this repository: Click "Code" (the green button) > Download Zip
 * Unzip the download
 * Open `index.html` in a web browser
