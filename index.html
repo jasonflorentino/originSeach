@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Origin Search</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <main>
+            <div id="title">
+                <h1>Origin Seach</h1>
+            </div>
+            <form id="originForm">
+                <div id="origin">
+                        <label for="originData"><h5>Origin Data</h5></label>
+                        <textarea id="originData" name="origin_data" rows="4" cols="50">Paste Origin data here.</textarea>
+                </div>
+                <div id="inputs">
+                    <div>
+                        <label for="startIndex"><h5>Start Index</h5></label>
+                        <input id="startIndex" type="number" name="startIndex" placeholder="Enter a number" value="1" required>
+                    </div>
+                    <div>
+                        <label for="numberOfItems"><h5>Number of Items to return</h5></label>
+                        <input id="numberOfItems" type="number" name="numberOfItems" placeholder="Enter a number" value="1" required>
+                    </div>
+                </div>
+                <button id="submit" type="button" onclick="execute()">Submit</button>
+                <button id="reset" type="reset" value="Reset" onclick="resetForm()">Reset</button>
+            </form>
+            <div id="resultArea">
+                <h5>Result:</h5> <span id="result"></span>
+            </div>
+        </main>
+    </body>
+    <script src="script.js"></script>
+</html>
